@@ -25,6 +25,8 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="forms/fcf-assets/css/fcf.default-custom.css" rel="stylesheet">
+  <link href="forms/fcf-assets/css/fcf.default.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -265,8 +267,7 @@
         <div class="section-title">
           <h2>Resume</h2>
           <p>Down below you may find a snapshot of my career so far. For more information about my experience you can
-            also <a
-              href="assets/documents/Brabete_Adrian_Resume.pdf">download</a>
+            also <a href="assets/documents/Brabete_Adrian_Resume.pdf">download</a>
             my CV and check out my <a href="https://www.linkedin.com/in/adrian-brabete/">LinkedIn</a> and <a
               href="https://github.com/SexySparrow">Github</a> profiles. </p>
         </div>
@@ -281,11 +282,11 @@
                 <h4>Bachelor of Computer Science &amp; Engineering</h4>
                 <h5>2018 - 2022</h5>
                 <p><em>Politehnica University of Bucharest, Romania</em></p>
-                  <ul>
-                    <li>4-year program designed to teach all the areas of the software stack;</li>
-                    <li>Studied Algorithms, Data Structures, Operating Systems, Databases and more;</li>
-                    <li>Developed a variety of projects both on my own and as part of a team.</li>
-                  </ul>
+                <ul>
+                  <li>4-year program designed to teach all the areas of the software stack;</li>
+                  <li>Studied Algorithms, Data Structures, Operating Systems, Databases and more;</li>
+                  <li>Developed a variety of projects both on my own and as part of a team.</li>
+                </ul>
               </div>
 
               <h3 class="resume-title">Volunteer experience</h3>
@@ -295,7 +296,8 @@
                 <p><em>Microsoft Learn Student Ambassador, Bucharest, Romania</em></p>
                 <ul>
                   <li>Contributed by teaching the introductory course to C# for a year;</li>
-                  <li>Have been leading the Game Development Path for the last couple of years, helping junior members learn
+                  <li>Have been leading the Game Development Path for the last couple of years, helping junior members
+                    learn
                     how to make their own games;</li>
                   <li>Organized and presented workshops about game development and physics engines.</li>
                 </ul>
@@ -339,8 +341,10 @@
                 <h5>2019 - 2020</h5>
                 <p><em>Upwork</em></p>
                 <ul>
-                  <li>Worked and communicated with clients from all around the world and brought their desired result with haste; </li>
-                  <li>Was part of game development teams, worked with Unity and C# to help bring people's dreams to reality;</li>
+                  <li>Worked and communicated with clients from all around the world and brought their desired result
+                    with haste; </li>
+                  <li>Was part of game development teams, worked with Unity and C# to help bring people's dreams to
+                    reality;</li>
                   <li>Edited videos and created special effects.</li>
                 </ul>
               </div>
@@ -358,8 +362,8 @@
         <div class="section-title">
           <h2>Portfolio</h2>
           <p>What better way to showcase someone's abilities than through his work?
-             My portfolio includes personal projects and faculty assignments, as well as open-source contributions.
-              The projects presented below have been developed solely by me or in collaboration with colleagues.</p>
+            My portfolio includes personal projects and faculty assignments, as well as open-source contributions.
+            The projects presented below have been developed solely by me or in collaboration with colleagues.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -468,8 +472,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="https://github.com/SexySparrow/OpenGL_Workshops_and_Games-main" title="OpenGL Games and Demos, available on Github"><i
-                    class="bx bxl-github"></i></a>
+                <a href="https://github.com/SexySparrow/OpenGL_Workshops_and_Games-main"
+                  title="OpenGL Games and Demos, available on Github"><i class="bx bxl-github"></i></a>
                 <a href="opengl.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -517,32 +521,45 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
+            <div class="fcf-body">
+              <link href="forms/contact-form.css" rel="stylesheet">
+              <div id="fcf-form">
+
+                <form id="fcf-form-id" class="fcf-form-class" method="post" action="forms/contact-form-process.php">
+
+                  <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                      <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                  </div>
+
+                  <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                      <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                  </div>
+
+                  <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                      <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+                        required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="fcf-form-group">
+                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send
+                      Message</button>
+                  </div>
+
+                  <div class="fcf-credit" id="fcf-credit">
+                  </div>
+
+                </form>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </div>
           </div>
 
         </div>
@@ -574,6 +591,9 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="forms/fcf-assets/js/lang/fcf.en.js"></script>
+  <script src="forms/fcf-assets/js/fcf.just-validate.min.js"></script>
+  <script src="forms/fcf-assets/js/fcf.form.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
