@@ -1,5 +1,5 @@
 <?php
-if ($_POST['Email']) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "adrianbrabete2014@gmail.com";
@@ -65,5 +65,12 @@ if ($_POST['Email']) {
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
+?>
+
+    <!-- include your success message below -->
+
+    Thank you for contacting us. We will be in touch with you very soon.
+
+<?php
 }
 ?>
