@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "adrianbrabete2014@gmail.com";
+    $email_to = "contact@adrianbrabete.engineer";
     $email_subject = "Personal website form submissions";
 
     function problem($error)
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- include your success message below -->
 
-    Thank you for contacting us. We will be in touch with you very soon.
+    Thank you for contacting me. I will be in touch with you very soon.
 
 <?php
 }
